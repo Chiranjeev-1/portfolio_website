@@ -221,7 +221,7 @@ padding-bottom: 25px;
     flex: 1;
     object-fit: contain;
     border-radius: 10px;
-    border: 2px solid teal ;
+    border: none ;
     margin-top: 20px;
     padding: 0 20px;
     cursor: pointer;
@@ -245,7 +245,7 @@ padding-bottom: 25px;
 }
 
 .project-description p {
-    color: black;
+    color: white;
     margin-top: 20px;
 }
 .project-title{
