@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #181818; */
+    color: black;
+    background-blend-mode: overlay;
+
+}
+
+
+
+/* Navigation Bar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    padding-right: 50px;
+    height: 100%;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.sidebar a {
+    padding: 25px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #bbb;
+    display: block;
+    position: relative;
+    transition: color 0.3s;
+    /* width: 100%; */
+    text-align: right;
+    
+    
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: #fff;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    right: 45px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: transparent;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border: 2px solid gray;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sidebar a.active::after {
+    background-color: #6c63ff;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown a {
+    padding: 10px;
+    padding-left: 30px;
+
+    font-size: 16px;
+}
+.dropdown-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 35px;
+    transition: margin-left 0.3s ease;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h1, h2 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+p {
+    color: black;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    
+    
+    
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 700px;
+    min-width: 350px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.profile-photo {
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    flex: 1;
+    max-width: 480px;
+    max-height: 480px;
+    min-width: 350px;
+    min-height: 350px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+/* Chart Container */
+.chart-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(50, 22, 208);
+}
+
+.projects h3 {
+    margin-top: 30px;
+    color: black;
+}
+
+.projects p {
+    color: black;
+}
+
+/* Achievements */
+.achievements ul {
+    list-style: none;
+}
+
+.achievements li {
+    padding: 5px 0;
+}
+
+        /* Projects Section */
+.projects-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+text-align: center;
+    justify-content: center;
+
+}
+
+.project-item img {
+    min-width: 450px;
+    max-width: 550px;
+    min-height: 250px;
+    flex: 1;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid teal ;
+    margin-top: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+
+    
+}
+
+.project-description {
+    flex: 1;
+    min-width: 450px;
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: left;
+
+
+}
+
+.project-description h3 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.project-description p {
+    color: black;
+    margin-top: 20px;
+}
+.project-title{
+    cursor: pointer;
+
+}
+.project-item img:hover{
+transform:scale(1.05);
+transition-duration: 1000ms;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    .profile-photo {
+        margin-bottom: 30px;
+        flex: 1;
+
+        max-width: 90%;
+        margin-top: 30px;
+
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        max-width: 90%;
+    }
+    .project-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        
+
+    }
+
+    .project-item img {
+        margin-bottom: 15px;
+        max-width: 500px;
+        
+    }
+    .achievements{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+    .projects-section{
+text-align: center;
+}
+
+}
+
+/* Highlight Active Section */
+.active-section {
+    background-color: #444 !important;
+    color: white !important;
+}
+
+@media (max-width: 600px) {
+
+.about-text {
+font-size: 14px; /* Reduce font size for smaller screens */
+line-height: 1.5; /* Improve readability */
+}
+
+.profile-photo {
+max-width: 60%; /* Further reduce image size for smaller screens */
+margin-bottom: 15px;
+max-height: 60%;
+margin-top: 30px;
+}
+
+.project-item img {
+        margin-bottom: 15px;
+        max-width: 300px;
+        
+    }
+.project-description{
+text-align: justify;
+max-width: 300px;
+font-size: 14px; /* Reduce font size for smaller screens */
+line-height: 1.5;
+}
+}
+
+
+/* Basic styling for the HR */
+hr {
+border: none;
+height: 2px;
+background: rgb(174, 172, 172);
+margin: 0px auto; /* Spacing above and below the HR */
+position: relative;
+width: 70%;
+
+
+
+
+}
+
+/* Optional: Adding decorative elements around the HR */
+/* Style for the contact section */
+.contact {
+display: flex;
+justify-content: space-between;
+/* align-items: center; */
+padding: 20px;
+border: 2px solid black;
+width: 70%;
+border-radius: 20px;
+margin:  50px auto;
+
+
+}
+
+/* Flex container for the icons */
+.contact-icons {
+display: flex;
+/* Distribute space evenly */
+/* width: 60%;  Adjust width as per design needs */
+justify-content: space-between;
+flex: 1;
+
+
+
+
+}
+
+/* Styling for each icon link */
+.icon-link {
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 33%;  /* Ensure equal width for each icon */
+}
+
+.icon-link img {
+width: 40px;  /* Set icon size */
+height: 40px;  /* Set icon size */
+transition: transform 0.3s ease;
+}
+
+/* Hover effect on icons */
+.icon-link:hover img {
+transform: scale(1.2);  /* Slight zoom on hover */
+}
+
+.achievements li{
+    cursor: pointer;
+}
+
+.achievements li:hover{
+    text-decoration: underline;
+}
