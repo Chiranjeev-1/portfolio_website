@@ -493,3 +493,13 @@ transform: scale(1.2);  /* Slight zoom on hover */
     display: inline-block;
 
 }
+.redirect_link{
+
+    margin: auto auto;
+}
+.projects a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
