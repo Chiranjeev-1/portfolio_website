@@ -5,11 +5,11 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Rubik;
     /* background-color: #181818; */
     color: black;
     background-blend-mode: overlay;
-    background-color: rgb(249, 235, 235);
+    background-color:#E6E6FA;
 
 }
 
@@ -36,18 +36,27 @@ body {
     padding: 25px 0;
     text-decoration: none;
     font-size: 18px;
-    color: #bbb;
+    color: #ffffff;
     display: block;
     position: relative;
     transition: color 0.3s;
     /* width: 100%; */
     text-align: right;
+    font-family: Playfair Display;
+    font-weight: 700;
+
     
     
 }
 
-.sidebar a:hover, .sidebar a.active {
-    color: #fff;
+.sidebar a.active {
+    color: #6c63ff;
+}
+.sidebar a.active:hover{
+    color: #6b63ffb0;
+}
+.sidebar a:hover{
+    color: rgb(255, 255, 255,0.7);
 }
 a{
     text-decoration: none;
@@ -55,7 +64,7 @@ a{
 }
 
 
-.sidebar::before {
+/* .sidebar::before {
     content: '';
     position: absolute;
     right: 45px;
@@ -81,7 +90,7 @@ a{
 
 .sidebar a.active::after {
     background-color: #6c63ff;
-}
+} */
 
 .dropdown {
     display: none;
@@ -145,7 +154,7 @@ p {
     max-width: 700px;
     min-width: 350px;
     text-align: justify;
-    font-family: sans-serif;
+    font-family: geologica;
 }
 
 .profile-photo {
@@ -268,6 +277,7 @@ a{
     max-width: 600px;
     padding: 0 20px;
     text-align: justify;
+    font-family: Geologica;
 
 
 
@@ -341,6 +351,7 @@ transition-duration: 1000ms;
         flex-direction: column;
         justify-content: left;
         align-items: center;
+        
     }
     .projects-section{
 text-align: center;
@@ -395,11 +406,13 @@ line-height: 1.5;
 min-width: auto;
 margin: 0 auto;
 }
-
-
 .contact{
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 0;
 }
+
+
+
 
 
 }
@@ -408,11 +421,13 @@ margin: 0 auto;
 /* Basic styling for the HR */
 hr {
 border: none;
-height: 2px;
-background: rgb(174, 172, 172);
+height: 3px;
+/* background: rgb(174, 172, 172); */
+background: #011431;
+
 margin: 0px auto; /* Spacing above and below the HR */
 position: relative;
-width: 70%;
+width: 80%;
 
 
 
